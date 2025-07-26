@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{	// корень с .vscode и другими файлами
+			"name": "root",
+			"path": "."
+		},
+		{
+			"name": "chapter-2",
+			"path": "./chapter-2"
+		},
+		{
+			"name": "chapter-3",
+			"path": "./chapter-3"
+		}
+	],
+	"settings": {}
+}

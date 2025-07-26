@@ -1,0 +1,7 @@
+.vscode-portable
+node_modules
+dist
+
+
+vscode-extensions/*
+# !vscode-extensions/extensions.json
