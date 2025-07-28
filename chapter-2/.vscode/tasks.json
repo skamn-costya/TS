@@ -2,10 +2,33 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "tslint: lint",
+			"type": "shell",
+			"command": "npx",
+			"args": ["tslint", "--project", "./tsconfig.json"],
+			"group": "build",
+			"problemMatcher": ["$eslint-stylish"]
+		},
+		{
 			"label": "tsc: build",
 			"type": "shell",
 			"command": "npx",
 			"args": ["tsc", "--project", "./tsconfig.json"],
+			"group": "build"
+		},
+		{
+			"label": "tsc: watch",
+			"type": "shell",
+			"command": "npx",
+			"args": ["tsc", "--project", "./tsconfig.json", "--watch"],
+			"isBackground": true,
+			"problemMatcher": ["$tsc-watch"],
+			"group": "build"
+		},
+		{
+			"label": "build: lint + tsc",
+			"dependsOn": ["tslint: lint", "tsc: build"],
+			"dependsOrder": "sequence",
 			"group": "build"
 		}
 	]
